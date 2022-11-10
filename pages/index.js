@@ -10,7 +10,7 @@ function HomePage() {
         // backgroundColor: "red" 
     };
 
-    // console.log(config.playlists);
+    // console.log(config.playlists); QUEBRADEIRA
 
     return (
         <>
