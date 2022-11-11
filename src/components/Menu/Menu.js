@@ -24,12 +24,12 @@ const StyledMenu = styled.header`
     }
   }
 `;
-
+// PAREI O VIDEO NO MINUTO 20:00 DAULA 2
 export default function Menu() {
     return (
         <StyledMenu>
             <div>
-                <Logo />
+                <Logo /> 
             </div>
             <Search />
         </StyledMenu>
