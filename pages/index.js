@@ -32,9 +32,6 @@ function HomePage() {
 
 export default HomePage
 
-
-
-
 const StyledHeader = styled.div`
     img {
         width: 80px;
