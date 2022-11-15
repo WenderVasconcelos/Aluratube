@@ -1,7 +1,9 @@
 {
   "name": "Wender Vasconcelos",
-  "description": "Technical Support",
+  "job": "Technical Support",
+  "bg": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
   "github": "WenderVasconcelos",
+  "favorites": [{}],
   "playlists": {
     "jogos": [
       {
@@ -103,7 +105,6 @@
         "url": "https://www.youtube.com/watch?v=8q36rNS5yVo",
         "thumb": "https://img.youtube.com/vi/8q36rNS5yVo/hqdefault.jpg"
       },
-
       {
         "title": "O que é o Java? #HipstersPontoTube",
         "url": "https://www.youtube.com/watch?v=90NcVNsKGik",
