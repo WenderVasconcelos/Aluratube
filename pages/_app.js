@@ -33,9 +33,9 @@ function ProviderWrapper(props) {
     )
 }
 
-
-    function Root({ Component, pageProps }) {
+function Root({ Component, pageProps }) {
     const contexto = React.useContext(ColorModeContext);
+    // console.log(contexto.mode);
     return (
         <ThemeProvider theme={theme[contexto.mode]}>
             <CSSReset />
@@ -48,7 +48,6 @@ function ProviderWrapper(props) {
 export default function _App(props) {
     return (
         <ProviderWrapper>
-            
             <Root {...props} />
         </ProviderWrapper>
     )
