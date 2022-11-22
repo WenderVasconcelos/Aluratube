@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const CSSReset = createGlobalStyle`
-  /* Reset */
+
   * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ export const CSSReset = createGlobalStyle`
     background-color: ${({ theme }) => theme.backgroundBase};
     color: ${({ theme }) => theme.textColorBase};
   }
-  /* NextJS */
+
   html {
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@ export const CSSReset = createGlobalStyle`
     display: flex;
     flex: 1;
   }
-  /* Globals */
+
   button,
   a {
     text-decoration: none;

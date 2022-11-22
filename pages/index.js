@@ -8,7 +8,7 @@ import { videoService } from "../src/services/videoService";
 function HomePage() {
     const service = videoService();
     const [valorDoFiltro, setValorDoFiltro] = React.useState("");
-    const [playlists, setPlaylists] = React.useState({});     // config.playlists
+    const [playlists, setPlaylists] = React.useState({});
 
     React.useEffect(() => {
         console.log("useEffect");
@@ -16,7 +16,7 @@ function HomePage() {
             .getAllVideos()
             .then((dados) => {
                 console.log(dados.data);
-                // Forma imutavel
+
                 const novasPlaylists = {};
                 dados.data.forEach((video) => {
                     if (!novasPlaylists[video.playlist]) novasPlaylists[video.playlist] = [];
@@ -25,7 +25,6 @@ function HomePage() {
                         ...novasPlaylists[video.playlist],
                     ];
                 });
-
                 setPlaylists(novasPlaylists);
             });
     }, []);
@@ -36,9 +35,8 @@ function HomePage() {
                 display: "flex",
                 flexDirection: "column",
                 flex: 1,
-                // backgroundColor: "red",
+
             }}>
-                {/* Prop Drilling */}
                 <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
                 <Header />
                 <Timeline searchValue={valorDoFiltro} playlists={playlists}>
@@ -50,15 +48,6 @@ function HomePage() {
 }
 
 export default HomePage
-
-// function Menu() {
-//     return (
-//         <div>
-//             Menu
-//         </div>
-//     )
-// }
-
 
 const StyledHeader = styled.div`
     background-color: ${({ theme }) => theme.backgroundLevel1};
@@ -78,7 +67,6 @@ const StyledHeader = styled.div`
 const StyledBanner = styled.div`
     background-color: blue;
     background-image: url(${({ bg }) => bg});
-    /* background-image: url(${config.bg}); */
     height: 230px;
 `;
 function Header() {
@@ -101,16 +89,11 @@ function Header() {
 }
 
 function Timeline({ searchValue, ...propriedades }) {
-    // console.log("Dentro do componente", propriedades.playlists);
     const playlistNames = Object.keys(propriedades.playlists);
-    // Statement
-    // Retorno por expressão
     return (
         <StyledTimeline>
             {playlistNames.map((playlistName) => {
                 const videos = propriedades.playlists[playlistName];
-                // console.log(playlistName);
-                // console.log(videos);
                 return (
                     <section key={playlistName}>
                         <h2>{playlistName}</h2>
